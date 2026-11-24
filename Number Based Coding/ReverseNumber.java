@@ -5,6 +5,9 @@ class ReverseNumber {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
+        int original = n;
+        n = Math.abs(n);
+
         //12345
         //54321
 
@@ -20,6 +23,10 @@ class ReverseNumber {
 
             n /= 10;
             // 1234,123,12,1,0
+        }
+
+        if(original < 0){
+            result = -result;
         }
 
         System.out.println(result);
